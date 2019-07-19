@@ -7,6 +7,9 @@
 </ion-header>
 
 <ion-content>
+  <ion-button (click)="scrollToBottom()" expand="block" fill="outline" *ngIf="isOverflown">
+    More Content At Bottom
+  </ion-button>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="scrollToBottom()" *ngIf="!isAtBottom">
       <ion-icon name="arrow-dropdown"></ion-icon>
