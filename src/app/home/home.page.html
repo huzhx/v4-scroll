@@ -7,6 +7,14 @@
 </ion-header>
 
 <ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="scrollToBottom()" *ngIf="!isAtBottom">
+      <ion-icon name="arrow-dropdown"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button (click)="scrollToTop()" *ngIf="isAtBottom">
+      <ion-icon name="arrow-dropup"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   <div class="ion-padding">
     <h1>What is Ionic Framework?</h1>
     <p>
